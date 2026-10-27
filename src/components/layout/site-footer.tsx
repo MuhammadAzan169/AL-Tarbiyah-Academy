@@ -1,0 +1,4 @@
+import { footerNav } from "@/config/brand";
+export function SiteFooter() {
+  return <footer className="academy-footer"><div className="academy-shell footer-grid"><div><a href="/" className="academy-logo light"><span className="logo-icon">✦</span><span>Al Tarbiyah <small>ACADEMY</small></span></a><p>Islamic knowledge for growing hearts and curious minds, wherever your family calls home.</p><p className="footer-muted">Online · English-language · Grades 1–6</p></div><div className="footer-links">{footerNav.map(group=><div key={group.title}><strong>{group.title}</strong>{group.links.map(link=><a href={link.to} key={link.to}>{link.label}</a>)}</div>)}</div></div><div className="academy-shell footer-bottom"><span>© 2026 Al Tarbiyah · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span><span>Enrollment and fees are confirmed directly with families. No payment is taken on this website.</span></div></footer>;
+}
